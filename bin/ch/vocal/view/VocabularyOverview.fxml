@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.vocal.view.VocabularyOverviewController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" styleClass="label-header" text="Übersicht der Lernstufen" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <GridPane alignment="CENTER" layoutX="14.0" layoutY="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="140.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="newWords" text="Neue Wörter" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="level1" text="Stufe 1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="level2" text="Stufe 2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="level3" text="Stufe 3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="level4" text="Stufe 4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="level5" text="Stufe 5" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Gelernt" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label styleClass="label-bright" text="Stufe:" GridPane.columnIndex="1" />
+            <Label styleClass="label-bright" text="Anzahl Wörter" GridPane.columnIndex="2" />
+            <Label styleClass="label-bright" text="Ältestes Wort" GridPane.columnIndex="3" />
+            <Label styleClass="label-bright" text="Neuestes Wort" GridPane.columnIndex="4" />
+            <Label fx:id="NrNewWords" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="NrLevel1" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="NrLevel2" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="NrLevel3" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="NrLevel4" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="NrLevel5" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label fx:id="Nrlearned" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label fx:id="OldDatNewWords" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="OldDatLevel1" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="OldDatLevel2" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label fx:id="OldDatLevel3" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label fx:id="OldDatLevel4" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label fx:id="OldDatLevel5" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label fx:id="OldDatlearned" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Label fx:id="NewDatNewWords" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="NewDatLevel1" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="NewDatLevel2" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label fx:id="NewDatLevel3" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Label fx:id="NewDatLevel4" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label fx:id="NewDatLevel5" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label fx:id="NewDatlearned" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Label styleClass="label-bright" text="Lern Auswahl" />
+            <RadioButton fx:id="rbNewWords" mnemonicParsing="false" onAction="#DoLearnNewWord" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="LernWahl" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="rbLevel1" mnemonicParsing="false" onAction="#DoLearnLevel1" toggleGroup="$LernWahl" GridPane.rowIndex="2" />
+            <RadioButton fx:id="rbLevel2" mnemonicParsing="false" onAction="#DoLearnLevel2" toggleGroup="$LernWahl" GridPane.rowIndex="3" />
+            <RadioButton fx:id="rbLevel3" mnemonicParsing="false" onAction="#DoLearnLevel3" toggleGroup="$LernWahl" GridPane.rowIndex="4" />
+            <RadioButton fx:id="rbLevel4" mnemonicParsing="false" onAction="#DoLearnLevel4" toggleGroup="$LernWahl" GridPane.rowIndex="5" />
+            <RadioButton fx:id="rbLevel5" mnemonicParsing="false" onAction="#DoLearnLevel5" toggleGroup="$LernWahl" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Label fx:id="Mode" layoutX="14.0" layoutY="300.0" text="Mode(Lernstatus)" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="Hint" layoutX="14.0" layoutY="335.0" text="Hint" AnchorPane.leftAnchor="10.0" />
+   </children>
+</AnchorPane>
